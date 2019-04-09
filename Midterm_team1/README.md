@@ -2,20 +2,25 @@
 
 ## Files
 * css
+<br>
 "/css" contains all bootstrap ".css" files, as well as a custom "/css/styles.css".
 * html
+<br>
 "/html" contains all of the ".php" files, with the exception of "/index.php".
 * images
+<br>
 "/images" contains all of the image resources used in the site.
 * js
+<br>
 "/js" contains all bootstrap ".js" files.
 * raw
-\n
+<br>
 "/raw" contains the raw ".kra" file for our knot logo.
 * index.php
-\n
+<br>
 "/index.php" is the landing page of our site.
 * README.md
+<br>
 "/README.md" contains information which may be helpful in navigating the webpage's source files.
 
 ## Website URL
