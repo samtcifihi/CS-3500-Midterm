@@ -28,15 +28,15 @@
 <div class="container">
 	<div class="row">
 		<div class=col">
-				<a class="btn btn-primary" href="../index.html">Home</a>
+				<a class="btn btn-primary" href="../index.php">Home</a>
 		</div>
 
 		<div class=col">
-				<a class="btn btn-primary" href="catalog.html">Knot Catalog</a>
+				<a class="btn btn-primary" href="catalog.php">Knot Catalog</a>
 		</div>
 
 		<div class=col">
-				<a class="btn btn-primary" href="about.html">About</a>
+				<a class="btn btn-primary" href="about.php">About</a>
 		</div>
 	</div>
 </div>
@@ -55,7 +55,7 @@
   							<div class="card-body">
     							<h5 class="card-title">Overhand Knot</h5>
     							<p class="card-text">A simple stopper knot.</p>
-    							<a href="overhandKnot.html" class="btn btn-primary">Learn How</a>
+    							<a href="overhandKnot.php" class="btn btn-primary">Learn How</a>
   							</div>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
   							<div class="card-body">
     							<h5 class="card-title">Square Knot</h5>
     							<p class="card-text">Combine two ends into a knot.</p>
-    							<a href="squareKnot.html" class="btn btn-primary">Learn How</a>
+    							<a href="squareKnot.php" class="btn btn-primary">Learn How</a>
   							</div>
 						</div>
 					</div>
@@ -78,7 +78,7 @@
   						<div class="card-body">
     						<h5 class="card-title">Figure Eight Knot</h5>
     						<p class="card-text">A stopper knot shaped like a figure 8.</p>
-    						<a href="figureEightKnot.html" class="btn btn-primary">Learn How</a>
+    						<a href="figureEightKnot.php" class="btn btn-primary">Learn How</a>
   						</div>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
   						<div class="card-body">
     						<h5 class="card-title">Slip Knot</h5>
     						<p class="card-text">Quick release style stopper knot.</p>
-    						<a href="slipKnot.html" class="btn btn-primary">Learn How</a>
+    						<a href="slipKnot.php" class="btn btn-primary">Learn How</a>
   						</div>
 					</div>
 				</div>

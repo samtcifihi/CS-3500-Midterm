@@ -28,15 +28,15 @@
 <div class="container">
 	<div class="row">
 		<div class=col">
-				<a class="btn btn-primary" href="../index.html">Home</a>
+				<a class="btn btn-primary" href="../index.php">Home</a>
 		</div>
 
 		<div class=col">
-				<a class="btn btn-primary" href="catalog.html">Knot Catalog</a>
+				<a class="btn btn-primary" href="catalog.php">Knot Catalog</a>
 		</div>
 
 		<div class=col">
-				<a class="btn btn-primary" href="about.html">About</a>
+				<a class="btn btn-primary" href="about.php">About</a>
 		</div>
 	</div>
 </div>
