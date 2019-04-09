@@ -10,8 +10,10 @@
 * js
 "/js" contains all bootstrap ".js" files.
 * raw
+\n
 "/raw" contains the raw ".kra" file for our knot logo.
 * index.php
+\n
 "/index.php" is the landing page of our site.
 * README.md
 "/README.md" contains information which may be helpful in navigating the webpage's source files.
