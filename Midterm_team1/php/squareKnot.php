@@ -57,7 +57,7 @@
 <!-- End of Content -->
 
 <!-- Footer Include-->
- <?php include 'footer.inc.php'; ?>
+ <?php include 'footer.inc.php'; ?>	
 </div>
 </body>
 </html>

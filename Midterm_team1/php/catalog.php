@@ -1,3 +1,8 @@
+<?php
+//'knotname'=> array('img', 'imgalt', 'knotdescription', 'knotlink')
+$catalog = array('Overhand Knot' => array('overhandR6.jpg', 'Overhand Knot card image cap', 'A simple stopper knot.', 'overhandKnot.php'), 'Square Knot' => array('squareR7.jpg', 'Square Knot Card image cap', 'Combine two ends into a knot.', 'squareKnot.php'), 'Figure Eight Knot' => array('fig8_R4.jpg', 'Figure 8 Knot card image cap', 'A stopper knot shaped like a figure 8.', 'figureEightKnot.php') ,'Slip Knot' => array('slipR6.jpg', 'Slip Knot Card image cap', 'Quick release style stopper knot.', 'slipKnot.php'));
+
+?>
 <!doctype html>
 <html lang="en">
 
