@@ -32,11 +32,11 @@
 		</div>
 
 		<div class=col">
-				<a class="btn btn-primary" href="html/catalog.php">Knot Catalog</a>
+				<a class="btn btn-primary" href="php/catalog.php">Knot Catalog</a>
 		</div>
 
 		<div class=col">
-				<a class="btn btn-primary" href="html/about.php">About</a>
+				<a class="btn btn-primary" href="php/about.php">About</a>
 		</div>
 	</div>
 </div>
