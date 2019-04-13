@@ -12,35 +12,8 @@
 </head>
 <body>
 	<div class="flex-wrapper">
-<!-- Title -->
-<div class="bg-primary">
-<div class="container">
-	<div class="jumbotron">
-		<h1 class="text-center">A Selection of Basic Knots</h1>
-	</div>
-</div>
-
-<!-- End of Title -->
-
-<!-- Navigation -->
-
-<div class="container">
-	<div class="row">
-		<div class=col">
-				<a class="btn btn-primary" href="../index.php">Home</a>
-		</div>
-
-		<div class=col">
-				<a class="btn btn-primary" href="catalog.php">Knot Catalog</a>
-		</div>
-
-		<div class=col">
-				<a class="btn btn-primary" href="about.php">About</a>
-		</div>
-	</div>
-</div>
-</div>
-<!-- End of Navigation -->
+<!--Header Include -->
+ <?php include 'header.inc.php'; ?>
 
 <!-- Content -->
 <div class="container">
@@ -83,22 +56,8 @@
 </div>
 <!-- End of Content -->
 
-<!-- Footer -->
-<div class="bg-primary">
-<div class="container" id="footerContainer">
-	<div class="row">
-		<div class="col">
-			<p>
-				Made for CS 3500 during the Spring 2019 semester at Western Michigan University.
-			</p>
-			<p>
-				All content on this website are not meant to be monetized in any format.
-			</p>
-		</div>
-	</div>
-</div>
-</div>
-<!-- End of Footer -->
+<!-- Footer Include-->
+ <?php include 'footer.inc.php'; ?>	
 </div>
 </body>
 </html>

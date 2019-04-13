@@ -1,3 +1,8 @@
+<?php
+//'knotname'=> array('img', 'imgalt', 'knotdescription', 'knotlink')
+$catalog = array('Overhand Knot' => array('overhandR6.jpg', 'Overhand Knot card image cap', 'A simple stopper knot.', 'overhandKnot.php'), 'Square Knot' => array('squareR7.jpg', 'Square Knot Card image cap', 'Combine two ends into a knot.', 'squareKnot.php'), 'Figure Eight Knot' => array('fig8_R4.jpg', 'Figure 8 Knot card image cap', 'A stopper knot shaped like a figure 8.', 'figureEightKnot.php') ,'Slip Knot' => array('slipR6.jpg', 'Slip Knot Card image cap', 'Quick release style stopper knot.', 'slipKnot.php'));
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -13,35 +18,8 @@
 
 <body>
 <div class="flex-wrapper">
-<!-- Title -->
-<div class="bg-primary">
-<div class="container">
-	<div class="jumbotron">
-		<h1 class="text-center">A Selection of Basic Knots</h1>
-	</div>
-</div>
-
-<!-- End of Title -->
-
-<!-- Navigation -->
-
-<div class="container">
-	<div class="row">
-		<div class=col">
-				<a class="btn btn-primary" href="../index.php">Home</a>
-		</div>
-
-		<div class=col">
-				<a class="btn btn-primary" href="catalog.php">Knot Catalog</a>
-		</div>
-
-		<div class=col">
-				<a class="btn btn-primary" href="about.php">About</a>
-		</div>
-	</div>
-</div>
-</div>
-<!-- End of Navigation -->
+<!--Header Include -->
+ <?php include 'header.inc.php'; ?>
 
 <!-- Content -->
 <div class="container">
@@ -98,22 +76,8 @@
 </div>
 <!-- End of Content -->
 
-<!-- Footer -->
-<div class="bg-primary">
-<div class="container" id="footerContainer">
-	<div class="row">
-		<div class="col">
-			<p>
-				Made for CS 3500 during the Spring 2019 semester at Western Michigan University.
-			</p>
-			<p>
-				All content on this website are not meant to be monetized in any format.
-			</p>
-		</div>
-	</div>
-</div>
-</div>
-<!-- End of Footer -->
+<!-- Footer Include-->
+ <?php include 'footer.inc.php'; ?>
 </div>
 </body>
 
