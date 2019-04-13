@@ -1,6 +1,20 @@
 <?php
 //'knotname'=> array('img', 'imgalt', 'knotdescription', 'knotlink')
-$catalog = array('Overhand Knot' => array('overhandR6.jpg', 'Overhand Knot card image cap', 'A simple stopper knot.', 'overhandKnot.php'), 'Square Knot' => array('squareR7.jpg', 'Square Knot Card image cap', 'Combine two ends into a knot.', 'squareKnot.php'), 'Figure Eight Knot' => array('fig8_R4.jpg', 'Figure 8 Knot card image cap', 'A stopper knot shaped like a figure 8.', 'figureEightKnot.php') ,'Slip Knot' => array('slipR6.jpg', 'Slip Knot Card image cap', 'Quick release style stopper knot.', 'slipKnot.php'));
+$knotCatalog = array('Overhand Knot' => array('overhandR6.jpg', 'Overhand Knot card image cap', 'A simple stopper knot.', 'overhandKnot.php'), 'Square Knot' => array('squareR7.jpg', 'Square Knot Card image cap', 'Combine two ends into a knot.', 'squareKnot.php'), 'Figure Eight Knot' => array('fig8_R4.jpg', 'Figure 8 Knot card image cap', 'A stopper knot shaped like a figure 8.', 'figureEightKnot.php') ,'Slip Knot' => array('slipR6.jpg', 'Slip Knot Card image cap', 'Quick release style stopper knot.', 'slipKnot.php'));
+
+
+function outputCatalog($name, $img, $imgAlt, $description, $link) {
+	echo "<div class='col-md-6'>";
+		echo "<div class='card' style='width: 18rem;'>";
+  			echo "<img class='card-img-top' src='../images/$img' alt='$imgAlt'>";
+  			echo "<div class='card-body'>";
+    			echo "<h5 class='card-title'>$name</h5>";
+    			echo "<p class='card-text'>$description</p>";
+    			echo "<a href='$link' class='btn btn-primary'>Learn How</a>";
+  			echo '</div>';
+		echo '</div>';				
+	echo '</div>';
+};
 
 ?>
 <!doctype html>
@@ -26,8 +40,27 @@ $catalog = array('Overhand Knot' => array('overhandR6.jpg', 'Overhand Knot card 
 	<div class="row">
 		<div class="col">
 			<h2>Knot Catalog</h2>
+			<!-- Start Knot Cards -->
 			<div class="row">
-					<div class="col-md-6">
+				<?php
+				$rowCounter = 0;
+
+				foreach ($knotCatalog as $key => $knotInfo) {
+					//Determine if new row needed
+					if ($rowCounter == 2)
+					{
+						echo '</div>';
+						echo '<div class="row">';
+						$rowCounter = 0;
+					}
+					//Output the card	
+					outputCatalog($key, $knotInfo[0], $knotInfo[1], $knotInfo[2], $knotInfo[3]);
+					//Add to counter for rows
+					$rowCounter++;
+				}
+
+				?>
+		<!-- 			<div class="col-md-6">
 						<div class="card" style="width: 18rem;">
   							<img class="card-img-top" src="../images/overhandR6.jpg" alt="Overhand Knot card image cap">
   							<div class="card-body">
@@ -70,7 +103,8 @@ $catalog = array('Overhand Knot' => array('overhandR6.jpg', 'Overhand Knot card 
   						</div>
 					</div>
 				</div>
-			</div>
+ -->			</div>
+			<!-- End Knot Cards -->
 		</div>
 	</div>
 </div>
