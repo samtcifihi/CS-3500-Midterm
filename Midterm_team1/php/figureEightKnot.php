@@ -26,7 +26,7 @@
 <div class="container">
 	<div class="row">
 		<div class=col">
-				<a class="btn btn-primary" href="../index.php">Home</a>
+				<a class="btn btn-primary" href="index.php">Home</a>
 		</div>
 
 		<div class=col">
