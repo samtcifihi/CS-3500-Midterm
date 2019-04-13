@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
- 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
- 	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+ 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+ 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     <title>A Selection of Basic Knots</title>
 </head>
@@ -14,7 +14,7 @@
 <body>
 <div class="flex-wrapper">
  <!--Header Include -->
- <?php include 'header.inc.php'; ?>
+ <?php include 'php/header.inc.php'; ?>
 
 <!-- Content -->
 <div class="container" id="landingContainer">
@@ -58,7 +58,7 @@
 <!-- End of Content -->
 
 <!-- Footer Include-->
- <?php include 'footer.inc.php'; ?>
+ <?php include 'php/footer.inc.php'; ?>
 </div>
 </body>
 </html>
