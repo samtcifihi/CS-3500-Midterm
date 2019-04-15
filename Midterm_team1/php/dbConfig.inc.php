@@ -1,10 +1,8 @@
 <?php
-#define('DBHOST', '107.180.56.180');
 define('DBHOST', 'localhost');
 define('DBNAME', 'testDB2');
 define('DBUSER', 'testuser');
 define('DBPASS', 'b7e151');
-#define('DBCONNSTRING','mysql:host=107.180.56.180;dbname=testDB2;charset=utf8mb4;');
 define('DBCONNSTRING','mysql:host=localhost;dbname=testDB2;charset=utf8mb4;');
 
 try {
@@ -18,23 +16,9 @@ echo "DB Connection is successful.";
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 #STEP Execute SQL Query
-$sqlCreate = "CREATE TABLE TestTable (
-		testParam1 CHAR(20),
-		testParam2 CHAR(20),
-		testParam3 CHAR(20)
-	);";
-
-$sqlAdd = "INSERT INTO TestTable VALUES (
-		'testA1',
-		'testA2',
-		'testA3'
-	);";
 
 $sqlRead = "SELECT * FROM TestTable;";
 
-
-	$pdo->query($sqlCreate);
-	$pdo->query($sqlAdd);
 	$result = $pdo->query($sqlRead);
 
 #STEP 4 Process Query Results
@@ -54,16 +38,3 @@ catch (PDOException $e){
 }
 
 ?>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Lab 14 PHP working databases</title>
-</head>
-
-<body>
-	<h1>PHP Working with Databases</h1>
-</body>
-
-</html>
