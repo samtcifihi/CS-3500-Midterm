@@ -30,7 +30,7 @@
 			<br>
 		</div>
 
-		<div class ="col">
+		<div class ="col"> <!-- Knot Container -->
 			<h2>Sample Knots</h2>
 			<div class="slideshow-container">
 
