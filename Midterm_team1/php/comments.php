@@ -7,94 +7,113 @@
 
  	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
  	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <title>Comments</title>	
+	<title>Comments</title>
 </head>
-
 <body>
-<div class="flex-wrapper">
+	<div class="flex-wrapper">
 <!--Header Include -->
  <?php include 'header.inc.php'; ?>
-
-<!--dbOpenConnection Include -->
- <?php #include 'dbOpenConnection.inc.php'; ?>
-
+ <?php include 'config.inc.php'; ?>
 <!-- Content -->
-<div class="container" id="aboutContainer">
+<div class="container">
+	<div class="row">
+		<div class="col">			
+			<div class="panel panel-default">
+			<div class="panel-heading">Submit Your Comments</div>
+			  <div class="panel-body">
+			  	<form method="post">
+			  	  <div class="form-group">
+				    <label for="exampleInputEmail1">Name</label>
+				    <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Name">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Subject</label>
+				    <textarea name="subject" class="form-control" rows="3"></textarea>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			  </div>
+			</div>
+
+			<?php 
+				if(isset($_POST) & !empty($_POST)){
+					$name = mysqli_real_escape_string($connection, $_POST['name']);
+					$email = mysqli_real_escape_string($connection, $_POST['email']);
+					$subject = mysqli_real_escape_string($connection, $_POST['subject']);
+
+					$isql = "INSERT INTO comments (name, email, subject) VALUES ('$name', '$email', '$subject')";
+					$ires = mysqli_query($connection, $isql) or die(mysqli_error($connection));
+					if($ires){
+						$smsg = "Your Comment Submitted Successfully";
+					}else{
+						$fmsg = "Failed to Submit Your Comment";
+					}
+				}
+			?>
+
+			<?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+			<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col">
-			<h2>Comments</h2>
+			<button id="btnFade" type="button" class="btn btn-primary">Show/Hide Comments</button>
+			<div id="hideMe">
+			<div class="panel panel-default">
+			<div class="panel-heading">Read The Comments</div>
+			<table class="table table-striped"> 
+				<thead> 
+					<tr> 
+						<th>#</th> 
+						<th>Name</th> 
+						<th>Comment</th> 
+						<th>Time</th> 
+					</tr> 
+				</thead> 
+				<tbody> 
+					<tr> 
+						<th scope="row">Comment ID</th> 
+						<td>Name</td> 
+						<td>Comment</td> 
+						<td>Comment Time</td>  
+					</tr> 
+					<?php
+				$sql = "SELECT * FROM comments";
+				$res = mysqli_query($connection, $sql);
 
-			<form>
-				<label>Title:</label>
-				<input type="text" name="tempTitle"><br>
-
-				<label>Submitted By:</label>
-				<input type="text" name="tempSubmitter"><br>
-
-				<label>Content:</label>
-				<input type="text" name="tempContent"><br>
-
-				<input type="submit" name="fsubmit">
-			</form>
-<?php
-define('DBHOST', 'localhost');
-define('DBNAME', 'testDB2');
-define('DBUSER', 'testuser');
-define('DBPASS', 'b7e151');
-define('DBCONNSTRING','mysql:host=localhost;dbname=testDB2;charset=utf8mb4;');
-echo "Definitions Successful";
-
-function newComment($title, $submitter, $content) {
-
-	try {
-		#Step 1 Establish dB Connection
-		#PDO Stands for PHP DB Object
-		$pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
-
-		echo "DB Connection is successful.";
-
-		#STEP Execute SQL Query
-		$sql = "INSERT INTO comments VALUES (
-				$title,
-				$submitter,
-				$content
-			)";
-		$statement = $pdo->prepare($sql);
-		$statement->execute();
-
-		#STEP 2.1 handle query errors
-		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-		#dbCloseConnection
-		$pdo=null;
-	}
-	#STEP 2: Handling connection errors
-	catch (PDOException $e){
-		echo "DB Connection Failed...";
-		die($e->getMessage());
-	}
-}
-?>
+				while ( $r = mysqli_fetch_assoc($res)) {
+			?>
+				<tr> 
+					<th scope="row"><?php echo $r['id']; ?></th> 
+					<td><?php echo $r['name'] ?></td> 
+					<td><?php echo $r['subject']; ?></td> 
+					<td><?php echo $r['submittime']; ?></td> 
+				</tr> 
+			<?php } ?>
+				</tbody> 
+			</table>
+			
+			</div>
+			</div>	
 		</div>
 	</div>
 </div>
-
-<?php
-	echo "fsubmit ready";
-	if (isset($_POST['fsubmit'])) {
-		echo "fsubmit pressed";
-		newComment($tempTitle, $tempSubmitter, $tempContent);
-	}
-	echo "fsubmit finished";
-?>
-
 <!-- End of Content -->
 
 <!-- Footer Include-->
- <?php include 'footer.inc.php'; ?>
-
-
+ <?php include 'footer.inc.php'; ?>	
+</div>
+<script type="text/javascript" language="javascript" src="../js/comments.js"></script> 
 </body>
-
 </html>
