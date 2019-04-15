@@ -69,6 +69,7 @@
 	<div class="row">
 		<div class="col">
 			<button id="btnFade" type="button" class="btn btn-primary">Show/Hide Comments</button>
+			<div id="hideMe">
 			<div class="panel panel-default">
 			<div class="panel-heading">Read The Comments</div>
 			<table class="table table-striped"> 
@@ -103,6 +104,7 @@
 				</tbody> 
 			</table>
 			
+			</div>
 			</div>	
 		</div>
 	</div>
@@ -112,7 +114,7 @@
 <!-- Footer Include-->
  <?php include 'footer.inc.php'; ?>	
 </div>
-<script type="text/javascript" language="javascript" src="js/comments.js"></script> 
+<script type="text/javascript" language="javascript" src="../js/comments.js"></script> 
 </body>
 </html>
 

@@ -1,5 +1,5 @@
 <?php
-	$connection = mysqli_connect('localhost', 'cs3500', 'app#0let#ree', 'knots');
+	$connection = mysqli_connect('localhost', 'root', '', 'knots');
 
 	if(!$connection){
 		echo "Error: Unable to connect to MySQL." . PHP_EOL;
