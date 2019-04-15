@@ -29,6 +29,38 @@
 			<p>As time permits new knots will be added to the catalog so feel free to check back often.</p>
 			<br>
 		</div>
+
+		<div class ="col">
+			<h2>Sample Knots</h2>
+			<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			  <div class="numbertext">1 / 3</div>
+			  <img src="images/fig8_R4.jpg" style="width:100%">
+			  <div class="text">Figure 8</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 3</div>
+			  <img src="images/overhandR6.jpg" style="width:100%">
+			  <div class="text">Overhand</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 3</div>
+			  <img src="images/slipR5.jpg" style="width:100%">
+			  <div class="text">Slip</div>
+			</div>
+
+			</div>
+			<br>
+
+			<div style="text-align:center">
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			</div>
+		</div>	
 	</div>
 </div>
 <div class="container" id="newsContainer">
@@ -60,5 +92,6 @@
 <!-- Footer Include-->
  <?php include 'php/footer.inc.php'; ?>
 </div>
+<script type="text/javascript" language="javascript" src="js/index.js"></script> 
 </body>
 </html>
