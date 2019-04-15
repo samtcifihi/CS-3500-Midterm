@@ -19,7 +19,9 @@
 		<div class=>
 				<a class="btn btn-primary" href="/php/catalog.php">Knot Catalog</a>
 		</div>
-
+		<div class=>
+				<a class="btn btn-primary" href="/php/comments.php">Comment</a>
+		</div>
 		<div class=>
 				<a class="btn btn-primary" href="/php/about.php">About</a>
 		</div>
