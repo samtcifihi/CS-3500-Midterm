@@ -1,7 +1,7 @@
 <!-- Connection Details -->
 
 <?php
-	$connection = mysqli_connect('localhost', 'testuser', '', '/knots.sql');
+	$connection = mysqli_connect('localhost', 'testuser', 'b7e151', 'testDB2');
 
 	// On Connection Failure
 	if(!$connection){
