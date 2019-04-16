@@ -2,7 +2,10 @@
 <div class="bg-primary">
 <div class="container" id="titleContainer">
 	<div class="jumbotron">
-		<h1 class="text-center">Basic<img src="/images/knotLogo.png" alt="knotLogo" height="200px" width="200px">Selection</h1>
+		<!--
+			Raw image proportion is 600:353, hence the scaling here.
+		 -->
+		<h1 class="text-center">Basic<img src="/images/knotLogo.png" alt="knotLogo" height="118px" width="200px">Selection</h1>
 	</div>
 </div>
 
