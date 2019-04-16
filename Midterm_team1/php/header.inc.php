@@ -19,14 +19,10 @@
 				<a class="btn btn-primary" href="/php/catalog.php">Knot Catalog</a>
 		</div>
 		<div class=>
-				<a class="btn btn-primary" href="/php/comments.php">Comment</a>
+				<a class="btn btn-primary" href="/php/comments.php">Comments</a>
 		</div>
 		<div class=>
 				<a class="btn btn-primary" href="/php/about.php">About</a>
-		</div>
-
-		<div class=col">
-				<a class="btn btn-primary" href="/php/comments.php">Comments</a>
 		</div>
 	</div>
 </div>

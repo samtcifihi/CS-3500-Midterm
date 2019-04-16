@@ -11,7 +11,7 @@
     <!-- jQuery first, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 	</script>
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 	<title>Comments</title>
@@ -24,7 +24,7 @@
 <!-- Content -->
 <div class="container">
 	<div class="row">
-		<div class="col">			
+		<div class="col">
 			<div class="panel panel-default">
 			<div class="panel-heading">Submit Your Comments</div>
 			  <div class="panel-body">
@@ -46,7 +46,7 @@
 			  </div>
 			</div>
 
-			<?php 
+			<?php
 				if(isset($_POST) & !empty($_POST)){
 					$name = mysqli_real_escape_string($connection, $_POST['name']);
 					$email = mysqli_real_escape_string($connection, $_POST['email']);
@@ -72,48 +72,48 @@
 			<div id="hideMe">
 			<div class="panel panel-default">
 			<div class="panel-heading">Read The Comments</div>
-			<table class="table table-striped"> 
-				<thead> 
-					<tr> 
-						<th>#</th> 
-						<th>Name</th> 
-						<th>Comment</th> 
-						<th>Time</th> 
-					</tr> 
-				</thead> 
-				<tbody> 
-					<tr> 
-						<th scope="row">Comment ID</th> 
-						<td>Name</td> 
-						<td>Comment</td> 
-						<td>Comment Time</td>  
-					</tr> 
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Name</th>
+						<th>Comment</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Comment ID</th>
+						<td>Name</td>
+						<td>Comment</td>
+						<td>Comment Time</td>
+					</tr>
 					<?php
 				$sql = "SELECT * FROM comments";
 				$res = mysqli_query($connection, $sql);
 
 				while ( $r = mysqli_fetch_assoc($res)) {
 			?>
-				<tr> 
-					<th scope="row"><?php echo $r['id']; ?></th> 
-					<td><?php echo $r['name'] ?></td> 
-					<td><?php echo $r['subject']; ?></td> 
-					<td><?php echo $r['submittime']; ?></td> 
-				</tr> 
+				<tr>
+					<th scope="row"><?php echo $r['id']; ?></th>
+					<td><?php echo $r['name'] ?></td>
+					<td><?php echo $r['subject']; ?></td>
+					<td><?php echo $r['submittime']; ?></td>
+				</tr>
 			<?php } ?>
-				</tbody> 
+				</tbody>
 			</table>
-			
+
 			</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </div>
 <!-- End of Content -->
 
 <!-- Footer Include-->
- <?php include 'footer.inc.php'; ?>	
+ <?php include 'footer.inc.php'; ?>
 </div>
-<script type="text/javascript" language="javascript" src="../js/comments.js"></script> 
+<script type="text/javascript" language="javascript" src="../js/comments.js"></script>
 </body>
 </html>
