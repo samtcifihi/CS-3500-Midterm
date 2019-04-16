@@ -2,7 +2,7 @@
 <div class="bg-primary">
 <div class="container" id="titleContainer">
 	<div class="jumbotron">
-		<h1 class="text-center"><img src="/images/knotLogo.png" alt="knotLogo" height="75px" width="75px"> A Selection of Basic Knots</h1>
+		<h1 class="text-center">Basic<img src="/images/knotLogo.png" alt="knotLogo" height="200px" width="200px">Selection</h1>
 	</div>
 </div>
 
